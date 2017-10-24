@@ -11,7 +11,7 @@ class MRAveMovieScore(MRJob):
 		return [
 			MRStep(mapper=self.mapperA,
 				   reducer=self.reducerA),
-			MRStep(reducer=self.reducer_find_top20)
+			MRStep(reducer=self.reducer_find_top10)
 		]
 		
 	def mapperA(self, _,line):
@@ -43,7 +43,7 @@ class MRAveMovieScore(MRJob):
 			yield None,(round(ave,4), title)
 
 	# Discard the key; it is just None
-	def reducer_find_top20(self, _, scores_pair):
+	def reducer_find_top10(self, _, scores_pair):
 		# each item of word_count_pairs is (count, word),
 		# so yielding one results in key=counts, value=word
 		return heapq.nlargest(10, scores_pair)
