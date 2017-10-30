@@ -1,8 +1,0 @@
-"a"	3
-"good"	1
-"here"	1
-"is"	3
-"it"	1
-"test"	3
-"text"	1
-"this"	1
