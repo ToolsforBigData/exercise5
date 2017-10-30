@@ -1,0 +1,5 @@
+1 Graph - "Graph has Euler tour"
+2 Graph - "Graph has not a Euler tour"
+3 Graph - "Graph has Euler tour"
+4 Graph - "Graph has Euler tour"
+5 Graph - "Graph has not a Euler tour"
